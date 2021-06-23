@@ -1,0 +1,31 @@
+body {
+    background-color: #2c2f33;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.container {
+    height: 100%;
+
+
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 25%;
+    height: 25%;
+
+    
+    text-align: center;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
