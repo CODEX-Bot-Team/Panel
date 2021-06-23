@@ -21,16 +21,20 @@ window.onload=()=>{
             SetCookie("discord_expire", Hash.expires_in)
             SetCookie("discord_scope", Hash.scope)
 
-            const Data = GetData(
+            const AuthString = Hash.token_type + " " + Hash.access_token
+
+            console.log(AuthString)
+
+            const Data = HttpRequest(
                 "GET",
                 BASEDISCORD + APIURL + APIVERSION + USER,
                 {
-                    Authentication: Hash.token_type + " " + Hash.access_token,
+                    'Authorization': AuthString,
                     'Content-Type': 'application/json'
                 }
             )
 
-            console.log(Data)
+            console.log(Data.json())
         } else {
             Err()
         }
