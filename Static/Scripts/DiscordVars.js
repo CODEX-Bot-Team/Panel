@@ -3,7 +3,7 @@ APIURL = "api/"
 APIVERSION = "v8/"
 OAUTH2 = "oauth2/"
 
-USER = "users/@me/"
+USER = "users/@me"
 
 CLIENT_ID = "769547693876969492"
 
