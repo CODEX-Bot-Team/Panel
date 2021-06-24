@@ -3,7 +3,7 @@ function HttpRequest(Method, Url, Headers, Body) {
         Url,
         
         {
-            mode: 'no-cors',
+            mode: 'cors',
             method: Method,
             headers: Headers,
             body: Body,
