@@ -10,8 +10,6 @@ function GetHash() {
             Hash[Hashes[0]] = Hashes[1] 
         }
 
-        console.log(Hash)
-
         return Hash
     } else {
         return null
