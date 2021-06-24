@@ -7,4 +7,4 @@ USER = "users/@me"
 
 CLIENT_ID = "769547693876969492"
 
-AUTHURL = BASEDISCORD + APIURL + OAUTH2 + "authorize?client_id=" + CLIENT_ID + "&" + "redirect_uri=https%3A%2F%2Fpanel.codex-bot.ga" + "&" + "response_type=token" + "&" + "scope="+ "email" + "%20" + "guilds" + "%20" + "guilds.join"+ "%20" + "identify"
+AUTHURL = BASEDISCORD + APIURL + OAUTH2 + "authorize?client_id=" + CLIENT_ID + "&" + "redirect_uri=" + encodeURIComponent("http://" + document.location.host + "/auth/callback") + "&" + "response_type=token" + "&" + "scope="+ encodeURIComponent("email guilds guilds.join identify")

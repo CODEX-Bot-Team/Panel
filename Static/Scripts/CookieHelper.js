@@ -1,5 +1,5 @@
 function GetCookies() {
-    const CookieTable = document.cookie.split(";")
+    const CookieTable = document.cookie.split("; ")
     const Cookies = {}
 
 

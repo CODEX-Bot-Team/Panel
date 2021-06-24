@@ -13,7 +13,6 @@ window.onload=()=>{
     const Hash = GetHash()
   
     if (Hash) {
-        console.log(Hash)
         if (Hash.access_token) {
             console.log(Hash.access_token)
             SetCookie("discord_access", Hash.access_token)
@@ -32,9 +31,23 @@ window.onload=()=>{
                     'Authorization': AuthString,
                     'Content-Type': 'application/json'
                 }
+            ).then(
+                ResponseData => {
+                    ResponseData.text()
+                    .then(
+                        ResponserData => {
+                            const UserData = JSON.parse(ResponserData)
+
+                            console.log(UserData)
+
+                            document.getElementById("image").setAttribute("src", "https://cdn.discordapp.com/avatars/" + UserData.id + "/" + UserData.avatar + ".png")
+                            document.getElementById("title").innerText = "Welcome  " + UserData.username + "#" + UserData.discriminator
+                        }
+                    )
+                }
             )
 
-            console.log(Data.json())
+
         } else {
             Err()
         }
