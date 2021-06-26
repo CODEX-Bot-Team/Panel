@@ -22,6 +22,6 @@ function GetCookie(Key) {
 }
 
 function SetCookie(Key, Value) {
-    document.cookie = Key + "=" + Value
+    document.cookie = Key + "=" + Value + ";path=/;domain=" + document.location.host + ";expires=Thu, 1 Jan 3000 12:00:00 UTC;"
     return document.cookie
 }
