@@ -4,7 +4,7 @@ function Err() {
     document.getElementById("title").innerText = "An error occured"
 }
 
-window.onload=()=>{
+window.onload = async () => {
 
     const urlSearchParams = new URLSearchParams(window.location.search);
     const Query = Object.fromEntries(urlSearchParams.entries());
@@ -40,12 +40,26 @@ window.onload=()=>{
 
                             console.log(UserData)
 
-                            document.getElementById("image").setAttribute("src", "https://cdn.discordapp.com/avatars/" + UserData.id + "/" + UserData.avatar + ".png")
+                            const AvatarLink = "https://cdn.discordapp.com/avatars/" + UserData.id + "/" + UserData.avatar + ".png"
+
+                            document.getElementById("image").setAttribute("src", AvatarLink)
                             document.getElementById("title").innerText = "Welcome  " + UserData.username + "#" + UserData.discriminator
+
+                            SetCookie("discord_name", encodeURIComponent(UserData.username))
+                            SetCookie("discord_avatar", encodeURIComponent(AvatarLink))
+
+                            setTimeout(
+                                function () {
+                                    window.location = "/"
+                                },
+                                1500
+                            )
                         }
                     )
                 }
             )
+
+            
 
 
         } else {
