@@ -2,22 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Redirecting</title>
 
-        <script src="../../Static/Scripts/DiscordVars.js"></script>
-        <script>
-            window.location = AUTHURL
-        </script>
+        <link rel="stylesheet" href="/Static/Style/MainPage.css">
 
-        <style>
-            body {
-                background-color: #2c2f33;
-            }
-        </style>
+        <script src="/Static/Scripts/Auth/Logout.js"></script>
+
+        <script src="/Static/Scripts/GetData.js"></script>
+        <script src="/Static/Scripts/DiscordVars.js"></script>
+        <script src="/Static/Scripts/Hash.js"></script>
+        <script src="/Static/Scripts/CookieHelper.js"></script>
+        <script src="/Static/Scripts/HttpRequest.js"></script>
+        <script src="/Static/Scripts/Sleep.js"></script>
+
+        <title>Working</title>
     </head>
+
     <body>
-        
+        <div class="container">
+            <div class="center">
+                <h1 id="title">Working</h1>
+                <br>
+                <img id="image" src="/Static/Images/logo.gif" alt="Loading" height="100px" width="100px">
+                <p id="message"></p>
+            </div>
+
+        </div>
     </body>
 </html>
