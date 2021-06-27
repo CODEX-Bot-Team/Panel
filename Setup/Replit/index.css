@@ -1,0 +1,9 @@
+.replit-auth-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #7289DA;
+    border-radius: 5px;
+    color:white;
+    border: none
+}
