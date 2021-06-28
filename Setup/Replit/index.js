@@ -6,10 +6,10 @@ function loaded() {
         document.getElementById("next-button").setAttribute("class", "next round enabled")
         document.getElementById("next-button").setAttribute("href", "/Setup/Instance/")
 
-        SetCookie("replit_name", Query.name)
+        SetCookie("replit_name", Query.user)
         SetCookie("replit_id", Query.id)
 
-        localStorage.replit_name = Query.name
+        localStorage.replit_name = Query.user
         localStorage.replit_id = Query.id
 
     } else {
