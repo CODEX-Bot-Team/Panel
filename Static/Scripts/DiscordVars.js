@@ -7,4 +7,4 @@ USER = "users/@me"
 
 CLIENT_ID = "769547693876969492"
 
-AUTHURL = BASEDISCORD + APIURL + OAUTH2 + "authorize?client_id=" + CLIENT_ID + "&" + "redirect_uri=" + encodeURIComponent("http://" + document.location.host + "/auth/callback") + "&" + "response_type=token" + "&" + "scope="+ encodeURIComponent("email guilds guilds.join identify")
+AUTHURL = BASEDISCORD + APIURL + OAUTH2 + "authorize?client_id=" + CLIENT_ID + "&" + "redirect_uri=" + encodeURIComponent("http://" + document.location.host + "/Auth/Callback") + "&" + "response_type=token" + "&" + "scope="+ encodeURIComponent("email guilds guilds.join identify")
