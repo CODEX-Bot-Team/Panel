@@ -16,3 +16,17 @@
     
     text-align: center;
 }
+
+.holder {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+
+    width: 90%;
+    height: 90%;
+
+    text-align: center;
+}
