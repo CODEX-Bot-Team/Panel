@@ -1,0 +1,28 @@
+.update-holder {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.update-text {
+}
+
+.name-holder {
+    padding: 10px;
+}
+
+.info-holder {
+    padding-right: 10px;
+}
+
+body {
+    background-color: #2f3136 !important;
+}
+
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
