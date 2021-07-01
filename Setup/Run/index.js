@@ -1,8 +1,10 @@
 import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
 import { request } from "https://cdn.skypack.dev/@octokit/request";
 
-window.onload = async function() {
+async function windowLoad() {
     console.log("loaded")
+
+    document.getElementById("repl-link").setAttribute("href", "https://replit.com/@" + localStorage.replit_name + "/CODEX-INSTANCE")
 
     if (Query.check == "") {
 
@@ -26,19 +28,32 @@ window.onload = async function() {
 
         var Data = JSON.parse(JSON.parse(RequestData.data).Body)
 
-
         console.log(Data)
 
-        if (Data.status != 404) {
-            document.getElementById("check").setAttribute("href", "")
-            document.getElementById("check").setAttribute("class", "next round disabled")
-            document.getElementById("check").innerText = "Found!"
+        document.getElementById("check").innerHTML = "Check"
 
-            document.getElementById("next-button").setAttribute("class", "next round enabled")
-            document.getElementById("next-button").setAttribute("href", "/Setup/Run/")
+        var Found = false
+
+        Data.fileNames.forEach(Name => {
+            console.log(Name)
+
+            if (Name == "CODEX.INSTANCE") {
+                document.getElementById("check").removeAttribute("href")
+                document.getElementById("check").setAttribute("class", "next round disabled")
+                document.getElementById("check").innerText = "Found!"
+
+                document.getElementById("next-button").setAttribute("class", "next round enabled")
+                document.getElementById("next-button").setAttribute("href", "/Setup/Run")
+            }
+        });
+
+        
+
+        if (Data.status != 404) {
+            
 
         } else {
-            document.getElementById("check").innerHTML = "Check"
+            
         }
     }
 }
