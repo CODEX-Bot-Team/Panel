@@ -24,6 +24,11 @@ async function callback() {
             SetCookie("discord_expire", Hash.expires_in)
             SetCookie("discord_scope", Hash.scope)
 
+            localStorage.discord_access = Hash.access_token
+            localStorage.discord_type = Hash.token_type
+            localStorage.discord_expire = Hash.expires_in
+            localStorage.discord_scope = Hash.scope
+
             const AuthString = Hash.token_type + " " + Hash.access_token
 
             const RequestData = await request(
@@ -50,6 +55,10 @@ async function callback() {
 
             SetCookie("discord_name", encodeURIComponent(UserData.username))
             SetCookie("discord_avatar", encodeURIComponent(AvatarLink))
+
+            localStorage.discord_name = UserData.username
+            localStorage.discord_id = UserData.id
+            localStorage.discord_avatar = AvatarLink
 
             setTimeout(
                 function () {
