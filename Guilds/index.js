@@ -65,6 +65,8 @@ window.onload = async function() {
                     ElementClone.getElementsByClassName("guild-icon")[0].setAttribute("src", "https://cdn.discordapp.com/icons/" + Guild.id + "/" + Guild.icon + ".png") 
                 }
 
+                ElementClone.setAttribute("href", "/Guilds/Guild/?guild_id=" + Guild.id)
+
 
                 document.getElementById("guilds").appendChild(document.createElement("br"))
                 document.getElementById("guilds").appendChild(ElementClone)
