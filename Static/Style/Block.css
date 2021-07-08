@@ -5,10 +5,12 @@
 
 .block-icon {
     padding: 10px;
+    padding-left: 20px;
     vertical-align: middle
 }
 
 .block-title {
+    text-align: left;
     background-color: #23272A;
     font-size: 20px;
 
