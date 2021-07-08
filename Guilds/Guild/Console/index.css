@@ -1,0 +1,36 @@
+.holder {
+    width: 75% !important;
+}
+
+.guild-info-holder {
+    background-color: #2f3136;
+    text-align: left;
+}
+
+.guild-info-holder div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.fa-play-circle {
+    color: #57F287
+}
+
+.fa-pause-circle {
+    color: #FEE75C
+}
+
+.fa-stop-circle {
+    color: #ED4245
+}
+
+.console-holder {
+    background-color: #2f3136;
+    text-align: left;
+    height: 500px;
+}
+
+.console-holder a {
+    padding: 10px;
+}
