@@ -31,20 +31,26 @@ async function callback() {
 
             const AuthString = Hash.token_type + " " + Hash.access_token
 
-            const RequestData = await request(
+            const RequestData = await fetch(
+                "https://Fetch-Proxy.scriptitwithcod.repl.co/request/",
                 {
-                    method: "GET",
-                    baseUrl: BASEDISCORD,
-                    url: APIURL + APIVERSION + USER, 
-                    headers: {
-                        'Authorization': AuthString,
-                        'Content-Type': 'application/json'
-                    },
+                    method: "POST",
+        
+                    body: JSON.stringify(
+                        {
+                            Method: "GET",
+                            Headers: [
+                                ["Authorization", localStorage.discord_type + " " + localStorage.discord_access],
+                                ["Content-Type", "application/json"]
+                            ],
+                            Url: BASEDISCORD + APIURL + APIVERSION + USER
+                        }
+                    )
                 }
             );
 
-            console.log(RequestData)
-            const UserData = RequestData.data
+            var ParsedRequest = await RequestData.json()
+            var UserData = await JSON.parse(ParsedRequest.Body)
 
             console.log(UserData)
 
