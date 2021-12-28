@@ -18,7 +18,8 @@
             window.addEventListener(
                 "load",
                 function() {
-                    location = "https://" + Query.redirect + "/auth/callback/replit/?data=" + btoa(Query.token.split(".")[1])
+                    var Data = JSON.parse(atob(decodeURIComponent(atob(Query.token.split(".")[1]))))
+                    location = "https://" + Query.redirect + "/auth/callback/replit/?name=" + Data.name + "&id=" + Data.sub
                 }
             )
             
