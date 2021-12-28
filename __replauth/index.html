@@ -19,7 +19,14 @@
                 "load",
                 function() {
                     var Data = JSON.parse(atob(Query.token.split(".")[1]))
-                    location = "https://" + Query.redirect + "/auth/callback/replit/?n=" + Data.name + "&i=" + Data.sub
+                    ref = "https://" + Query.redirect + "/auth/callback/replit/?n=" + Data.name + "&i=" + Data.sub
+
+                    var link = document.createElement("a");
+                    link.referrerPolicy = "no-referrer";
+                    link.rel = "noreferrer";
+
+                    link.href = ref;
+                    link.click();
                 }
             )
             
