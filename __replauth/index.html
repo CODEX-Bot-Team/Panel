@@ -19,7 +19,7 @@
                 "load",
                 function() {
                     var Data = JSON.parse(atob(Query.token.split(".")[1]))
-                    location = "https://" + Query.redirect + "/auth/callback/replit/?replitname=" + Data.name + "&replitid=" + Data.sub
+                    location = "https://" + Query.redirect + "/auth/callback/replit/?n=" + Data.name + "&i=" + Data.sub
                 }
             )
             
