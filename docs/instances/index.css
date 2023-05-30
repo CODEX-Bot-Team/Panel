@@ -1,0 +1,53 @@
+.holder {
+    width: 75% !important;
+}
+
+.instances {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.instances a, h1, span, p {
+    text-decoration: none;
+}
+
+.instance-title-holder {
+    float: left;
+    height: 100%;
+    padding: 10px;
+
+    
+}
+
+.instance-title-holder h1 {
+    padding-left: 25px;
+}
+
+.instance-title-holder img, h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.instance {
+    width: 99%;
+    height: 100px;
+    background-color: #2f3136;
+    margin: auto;
+
+    border-radius: 25px;
+    border: 2px solid;
+    border-color:#2f3136;
+}
+
+.instance-holder {
+    padding-bottom: 25px;
+
+    
+    margin: auto;
+    width: 50%;
+}
+
+.instance:hover {
+    border-color:#99AAB5;
+}
